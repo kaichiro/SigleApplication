@@ -1,5 +1,5 @@
 //
-//  ViewControllerTela2.swift
+//  ViewControllerTela3.swift
 //  SigleApplication
 //
 //  Created by Aluno on 23/03/2019.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewControllerTela2: UIViewController {
+class ViewControllerTela3: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Main Form"
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +23,12 @@ class ViewControllerTela2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func actnVoltar(_ sender: UIButton) {
-        // Não executando nenhum código
-        //dismiss(animated: true, completion: nil)
+    // PUSH via código
+    @IBAction func callOtherFormPUSH(_ sender: UIButton) {
+        let proximaTela = storyboard?.instantiateViewController(withIdentifier: "tela4") as! ViewControllerTela4
         
-        // Executando algum código
-        dismiss(animated: true) {
-            print("voltando...")
-        }
+        // Chamando a próxima tela de forma animada (transição) por PUSH
+        self.navigationController?.pushViewController(proximaTela, animated: true)
     }
     
     /*

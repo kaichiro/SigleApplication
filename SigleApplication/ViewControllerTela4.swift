@@ -1,5 +1,5 @@
 //
-//  ViewControllerTela2.swift
+//  ViewControllerTela4.swift
 //  SigleApplication
 //
 //  Created by Aluno on 23/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTela2: UIViewController {
+class ViewControllerTela4: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +21,7 @@ class ViewControllerTela2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func actnVoltar(_ sender: UIButton) {
-        // Não executando nenhum código
-        //dismiss(animated: true, completion: nil)
-        
-        // Executando algum código
-        dismiss(animated: true) {
-            print("voltando...")
-        }
-    }
-    
+
     /*
     // MARK: - Navigation
 

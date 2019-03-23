@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pu5-WC-K5A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,15 +25,25 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XnN-6K-Gxa" kind="show" id="rUs-m9-iu2"/>
+                                    <segue destination="XnN-6K-Gxa" kind="presentation" identifier="segueModal" modalTransitionStyle="coverVertical" id="rUs-m9-iu2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-d7-IAI">
+                                <rect key="frame" x="64" y="276" width="247" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Modal por Código"/>
+                                <connections>
+                                    <action selector="proximaTelaModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQK-BA-hqb"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.80673436594109471" green="1" blue="0.75704109052474822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9KC-d7-IAI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1lM-ei-sNi"/>
                             <constraint firstItem="rCF-Md-z6o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7oz-D4-4B4"/>
                             <constraint firstItem="rCF-Md-z6o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S8E-BR-3Kz"/>
+                            <constraint firstItem="9KC-d7-IAI" firstAttribute="top" secondItem="rCF-Md-z6o" secondAttribute="bottom" constant="200" id="aGh-31-13W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -45,17 +55,114 @@
         <!--View Controller Tela2-->
         <scene sceneID="nIs-FF-OVg">
             <objects>
-                <viewController id="XnN-6K-Gxa" customClass="ViewControllerTela2" customModule="SigleApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tela2" id="XnN-6K-Gxa" customClass="ViewControllerTela2" customModule="SigleApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZMs-4n-Bwx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tela2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1y-vP-XdG">
+                                <rect key="frame" x="63" y="121" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjd-1Z-PvI">
+                                <rect key="frame" x="63" y="328" width="93" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="actnVoltar:" destination="XnN-6K-Gxa" eventType="touchUpInside" id="yEI-NQ-ozu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80419682438885065" blue="0.70169321398015594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7Pz-Q8-gZb"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xq8-Rr-pOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="99"/>
+            <point key="canvasLocation" x="632.79999999999995" y="98.50074962518741"/>
+        </scene>
+        <!--View Controller Tela3-->
+        <scene sceneID="Kot-Uw-HDK">
+            <objects>
+                <viewController id="PhF-78-mJE" customClass="ViewControllerTela3" customModule="SigleApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pv3-0d-sCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UX-r1-e5W">
+                                <rect key="frame" x="48.5" y="134" width="278" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Next Form for PUSH">
+                                    <color key="titleColor" red="0.55507211560000003" green="1" blue="0.20537214570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.80419682439999995" blue="0.70169321399999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vaj-Yt-TDY" kind="show" id="8tf-cq-M1t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtq-jK-74N">
+                                <rect key="frame" x="90" y="232" width="194" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="PUSH via código">
+                                    <color key="titleColor" red="1" green="0.80419682439999995" blue="0.70169321399999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="callOtherFormPUSH:" destination="PhF-78-mJE" eventType="touchUpInside" id="iaB-hE-MTW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29322803863376445" green="0.4452117081053385" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dtq-jK-74N" firstAttribute="centerX" secondItem="hF0-n9-ath" secondAttribute="centerX" id="20e-C5-1va"/>
+                            <constraint firstItem="Dtq-jK-74N" firstAttribute="top" secondItem="9UX-r1-e5W" secondAttribute="bottom" constant="50" id="D5e-FQ-QLf"/>
+                            <constraint firstItem="9UX-r1-e5W" firstAttribute="top" secondItem="hF0-n9-ath" secondAttribute="top" constant="70" id="Z3W-Az-7Aa"/>
+                            <constraint firstItem="9UX-r1-e5W" firstAttribute="centerX" secondItem="hF0-n9-ath" secondAttribute="centerX" id="eLG-rV-eTb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hF0-n9-ath"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y3m-GX-T1m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQX-nd-m2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2760.8000000000002" y="-620.23988005997012"/>
+        </scene>
+        <!--View Controller Tela4-->
+        <scene sceneID="Pjf-XJ-Nlm">
+            <objects>
+                <viewController storyboardIdentifier="tela4" id="Vaj-Yt-TDY" customClass="ViewControllerTela4" customModule="SigleApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tns-st-V9y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.55507211564345793" green="1" blue="0.2053721457172748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tR9-Ds-dnW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5MQ-hC-Pey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3519.1999999999998" y="-620.23988005997012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mTD-91-kXr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pu5-WC-K5A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x2g-Ex-N5e">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PhF-78-mJE" kind="relationship" relationship="rootViewController" id="YhY-Lx-Q5E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rm-wG-ZHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="-620"/>
         </scene>
     </scenes>
 </document>
