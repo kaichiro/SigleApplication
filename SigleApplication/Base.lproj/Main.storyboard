@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pu5-WC-K5A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WDD-f8-vKC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,10 +27,69 @@
             </objects>
             <point key="canvasLocation" x="-1463" y="99"/>
         </scene>
+        <!--View Controller Login-->
+        <scene sceneID="wNP-9v-ZYP">
+            <objects>
+                <viewController id="WDD-f8-vKC" customClass="ViewControllerLogin" customModule="SigleApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rcv-ZM-SzN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnn-pJ-4zB" userLabel="Login">
+                                <rect key="frame" x="57" y="126" width="262.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6m-Xl-wru" userLabel="Senha">
+                                <rect key="frame" x="56.5" y="236" width="262.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2A-i2-hcf">
+                                <rect key="frame" x="57" y="496" width="262.5" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="TestaCredenciais:" destination="WDD-f8-vKC" eventType="touchUpInside" id="Yy1-YK-1do"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0H-VV-nTA">
+                                <rect key="frame" x="166.5" y="55" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55507211560000003" green="1" blue="0.20537214570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S2A-i2-hcf" firstAttribute="centerX" secondItem="mPC-RS-JNl" secondAttribute="centerX" id="1mm-bb-8kY"/>
+                            <constraint firstItem="Q6m-Xl-wru" firstAttribute="width" secondItem="wnn-pJ-4zB" secondAttribute="width" id="8nU-4z-H2Z"/>
+                            <constraint firstItem="L0H-VV-nTA" firstAttribute="top" secondItem="mPC-RS-JNl" secondAttribute="top" constant="35" id="9uQ-HD-f0P"/>
+                            <constraint firstItem="wnn-pJ-4zB" firstAttribute="top" secondItem="L0H-VV-nTA" secondAttribute="bottom" constant="50" id="ESe-aW-8bq"/>
+                            <constraint firstItem="Q6m-Xl-wru" firstAttribute="centerX" secondItem="mPC-RS-JNl" secondAttribute="centerX" id="GZH-2h-FI5"/>
+                            <constraint firstItem="L0H-VV-nTA" firstAttribute="centerX" secondItem="mPC-RS-JNl" secondAttribute="centerX" id="JVk-XP-jMu"/>
+                            <constraint firstItem="wnn-pJ-4zB" firstAttribute="centerX" secondItem="mPC-RS-JNl" secondAttribute="centerX" id="Rlr-uN-eo8"/>
+                            <constraint firstItem="wnn-pJ-4zB" firstAttribute="width" secondItem="rcv-ZM-SzN" secondAttribute="width" multiplier="0.7" id="fRD-Mk-M5K"/>
+                            <constraint firstItem="S2A-i2-hcf" firstAttribute="top" secondItem="Q6m-Xl-wru" secondAttribute="bottom" constant="230" id="gX4-Is-QKJ"/>
+                            <constraint firstItem="S2A-i2-hcf" firstAttribute="width" secondItem="Q6m-Xl-wru" secondAttribute="width" id="tQq-Om-Lgs"/>
+                            <constraint firstItem="Q6m-Xl-wru" firstAttribute="top" secondItem="wnn-pJ-4zB" secondAttribute="bottom" constant="80" id="wAe-bi-dzL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mPC-RS-JNl"/>
+                    </view>
+                    <connections>
+                        <outlet property="olLogin" destination="wnn-pJ-4zB" id="K0r-op-xob"/>
+                        <outlet property="olSenha" destination="Q6m-Xl-wru" id="ZKB-4o-TB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJ2-i3-xRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2034" y="-768"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JoW-lg-J8w">
             <objects>
-                <tabBarController id="fxc-hc-MvR" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tbCtrl" id="fxc-hc-MvR" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Ja-kQ-Z5u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -71,6 +131,21 @@
                                     <action selector="proximaTelaModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQK-BA-hqb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfJ-st-SPk">
+                                <rect key="frame" x="164" y="473" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleLogoff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sN-FS-VEd"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-0E-fAD">
+                                <rect key="frame" x="164" y="387" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="actnSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="KUh-bN-WGg"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.80673436594109471" green="1" blue="0.75704109052474822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,6 +158,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6OX-fZ-i31"/>
+                    <connections>
+                        <outlet property="olSwitch" destination="DZM-0E-fAD" id="EJO-LG-d7G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

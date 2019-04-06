@@ -15,6 +15,26 @@ class ViewControllerTela1: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBOutlet weak var olSwitch: UISwitch!
+    
+    
+    @IBAction func actnSwitch(_ sender: Any) {
+        PersistenceManager.save(value: olSwitch.isOn)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        olSwitch.isOn = PersistenceManager.getValue()
+    }
+    
+    @IBAction func handleLogoff(_ sender: UIButton) {
+        let alert = UIAlertController(title: "AStenção", message: "Deseja mesmo sair:", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "sim", style: .default, handler:{
+            (UIAlertAction) in self.dismiss(animated:true,completion:nil)
+            }))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        self.present(alert,animated: true,completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
